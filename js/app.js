@@ -57,6 +57,3 @@ function setQuestion(){
     })    
 }
 
-// function questionPicker(){ 
-//     questionList[Math.random * questionList.length];
-// }
