@@ -5,7 +5,6 @@ const startButton = document.getElementById('startButton');
 const continueButton = document.getElementById('continue');
 const scoreContainer = document.getElementById('score');
 const helpButton = document.getElementbyIdd('helpMenu');
-const questionList = 
 
 startButton.addEventListener('click', () => {
 
