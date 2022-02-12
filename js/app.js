@@ -5,8 +5,6 @@ const startButton = document.getElementById('startButton');
 const continueButton = document.getElementById('continue');
 const scoreContainer = document.getElementById('score');
 
-const questionList = 
-
 startButton.addEventListener('click', () => {
 
     startButton.classList.add('hide');
