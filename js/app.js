@@ -4,7 +4,7 @@ const question = document.getElementById('question');
 const startButton = document.getElementById('startButton');
 const continueButton = document.getElementById('continue');
 const scoreContainer = document.getElementById('score');
-
+const helpButton = document.getElementbyIdd('helpMenu');
 const questionList = 
 
 startButton.addEventListener('click', () => {
@@ -55,3 +55,9 @@ function setQuestion(){
         }
         i++;
     })    
+    
+helpButton.addEventListner('click', () => {
+    console.log(here is the help menu');
+    
+})
+    
