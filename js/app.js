@@ -28,6 +28,7 @@ buttons.forEach(el => {
 })
 
 continueButton.addEventListener('click', () => {
+    continueButton.classList.add('hide');
     buttons.forEach(el => {
         el.classList.remove('correct');
     });
@@ -52,4 +53,5 @@ function setQuestion(){
             buttons[i].classList.add('correct');
         }
         i++;
-    })    
+    })
+}
