@@ -45,3 +45,10 @@ body {
 .rightAnswer{
     background: green;
 }
+
+nav {
+    height: 40px;
+    display: flex;
+    flex: space-around; 
+    
+}
