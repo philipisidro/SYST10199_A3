@@ -48,7 +48,7 @@ function shuffleQuestion(){
     };
     
     
-    console.log(shuffleQuestionsgList.q);
+    console.log(shuffleQuestionsList.q);
 
 };
 
