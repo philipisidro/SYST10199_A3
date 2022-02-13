@@ -4,6 +4,7 @@ const question = document.getElementById('question');
 const startButton = document.getElementById('startButton');
 const continueButton = document.getElementById('continue');
 const scoreContainer = document.getElementById('score');
+const shuffledQuestionsList = [];
 let score = 0;
 
 startButton.addEventListener('click', () => {
@@ -32,6 +33,39 @@ continueButton.addEventListener('click', () => {
     });
     setQuestion();
 });
+
+const testbtn = document.getElementById('testbtn');
+
+testbtn.addEventListener('click', ()=> shuffleQuestion());
+
+function shuffleQuestion(){
+    let max = questionList.length-1;
+    // console.log(questionList[randomNumber]);
+    for (let i = 0; i < questionList.length; i++){
+        
+        randomNumber = Math.floor(Math.random() * max);
+        el = questionList[randomNumber]; 
+        
+        shuffledQuestionsList.forEach(el => {
+            do {
+            } while (questionList[randomNumber] = el);
+        });
+        shuffledQuestionsList[i] = questionList[randomNumber] ;
+    }
+    console.log(shuffledQuestionsList);
+    // questionList.forEach(el => { 
+    //     let randomNumber = Math.floor(Math.random() * max);
+    //     for (let i = 0; i < questionList.length; i++){
+    //         shuffledQuestionsList.forEach(el => {
+    //             if (shuffledQuestionsList[i] == question[randomNumber]){
+    //                 shuffledQuestionsList[i] = question[randomNumber];
+    //             };
+    //         });
+    //     };
+    //     console.log(question[randomNumber]); 
+    // });
+    // console.log(shuffledQuestionsList);
+};
 
 function setQuestion(){
 
