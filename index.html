@@ -10,14 +10,12 @@
     <title>Trivia Game</title>
 </head>
 <body>
-    <div id="topNav">
-        <nav>   
-            <button id="helpMenu"> ? </button>  
-        <nav>
-    </div>
     <div class="container">
         <div id="questionContainer" class="hide">
-            <div id="question"> Question</div>
+            <div id="score"></div>
+            <div id="question" class=""></div>
+        </div>
+        <div class="answerContainer">
             <div id="answerButtons" class="buttonGrid">
                 <button id="a1" class="button hide">Answer 1</button>
                 <button id="a2" class="button hide">Answer 2</button>
@@ -25,16 +23,10 @@
                 <button id="a4" class="button hide">Answer 4</button>
             </div>
         </div>
-        <div class="controls">
+        <div id="controlContainer" class="controls">
             <button id="startButton" class="btn"> Start </button>
             <button id="continue" class="btn hide"> Continue </button>
         </div>
     </div>
-    <div id="bottomNav" class="hide">
-        <nav id="footer">
-            <div id="score"></div>
-        </nav>
-    </div>
-    
 </body>
 </html>
