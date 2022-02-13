@@ -4,7 +4,7 @@ const question = document.getElementById('question');
 const startButton = document.getElementById('startButton');
 const continueButton = document.getElementById('continue');
 const scoreContainer = document.getElementById('score');
-const shuffledQuestionsList = [];
+const shuffledQuestionsList = Array.apply(null, Array(5)).map(function () {});
 let score = 0;
 
 startButton.addEventListener('click', () => {
@@ -41,16 +41,22 @@ testbtn.addEventListener('click', ()=> shuffleQuestion());
 function shuffleQuestion(){
     let max = questionList.length-1;
     // console.log(questionList[randomNumber]);
-    for (let i = 0; i < questionList.length; i++){
-        
+
+    
+    //starts a for loop that will repeat as many times as the questionList is long
+    for (let i = 0; i < questionList.length; i++){ 
+        // generates a random number between 0 and the the length of the question array      
         randomNumber = Math.floor(Math.random() * max);
         el = questionList[randomNumber]; 
         
+        //starts a loop that will go through every item in the shuffled question list
         shuffledQuestionsList.forEach(el => {
-            do {
-            } while (questionList[randomNumber] = el);
+            if (el != questionList[randomNumber]){
+                // gets the a random item from the quesitonList Array and assigns it to the shuffle questions arrays at i
+                shuffledQuestionsList[i] = questionList[randomNumber];    
+            }
+            
         });
-        shuffledQuestionsList[i] = questionList[randomNumber] ;
     }
     console.log(shuffledQuestionsList);
     // questionList.forEach(el => { 
