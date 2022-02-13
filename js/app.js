@@ -4,7 +4,7 @@ const question = document.getElementById('question');
 const startButton = document.getElementById('startButton');
 const continueButton = document.getElementById('continue');
 const scoreContainer = document.getElementById('score');
-const shuffledQuestionsList = Array.apply(null, Array(5)).map(function () {});
+let shuffledQuestionsList = [] ;
 let score = 0;
 
 startButton.addEventListener('click', () => {
@@ -35,42 +35,21 @@ continueButton.addEventListener('click', () => {
 });
 
 const testbtn = document.getElementById('testbtn');
-
-testbtn.addEventListener('click', ()=> shuffleQuestion());
+testbtn.addEventListener('click', () => shuffleQuestion());
 
 function shuffleQuestion(){
-    let max = questionList.length-1;
-    // console.log(questionList[randomNumber]);
-
+    let currentIndex = questionList.length. shuffledQuestionsList;
     
-    //starts a for loop that will repeat as many times as the questionList is long
-    for (let i = 0; i < questionList.length; i++){ 
-        // generates a random number between 0 and the the length of the question array      
-        randomNumber = Math.floor(Math.random() * max);
-        el = questionList[randomNumber]; 
+    while (currentIndex != 0) {
+        shuffledQuestionsList = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
         
-        //starts a loop that will go through every item in the shuffled question list
-        shuffledQuestionsList.forEach(el => {
-            if (el != questionList[randomNumber]){
-                // gets the a random item from the quesitonList Array and assigns it to the shuffle questions arrays at i
-                shuffledQuestionsList[i] = questionList[randomNumber];    
-            }
-            
-        });
-    }
-    console.log(shuffledQuestionsList);
-    // questionList.forEach(el => { 
-    //     let randomNumber = Math.floor(Math.random() * max);
-    //     for (let i = 0; i < questionList.length; i++){
-    //         shuffledQuestionsList.forEach(el => {
-    //             if (shuffledQuestionsList[i] == question[randomNumber]){
-    //                 shuffledQuestionsList[i] = question[randomNumber];
-    //             };
-    //         });
-    //     };
-    //     console.log(question[randomNumber]); 
-    // });
-    // console.log(shuffledQuestionsList);
+        [questionList[currentIndex], questionList[shuffledQuestionsList]] = [questionList[shuffledQuestionsList], questionList[currentIndex]] 
+    };
+    
+    
+    console.log(shuffleQuestionsgList.q);
+
 };
 
 function setQuestion(){
