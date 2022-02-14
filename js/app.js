@@ -64,3 +64,6 @@ function setQuestion(){
         i++;
     });
 };
+
+
+alert('whats up fucker?')
