@@ -5,6 +5,7 @@ const startButton = document.getElementById('startButton');
 const continueButton = document.getElementById('continue');
 const scoreContainer = document.getElementById('score');
 let score = 0;
+let currentQuestion = 0;
 
 startButton.addEventListener('click', () => {
     startButton.classList.add('hide'); //hides the start button
@@ -47,23 +48,17 @@ function shuffleQuestion(){
 
 function setQuestion(){
 
-    buttons.forEach(el => {
+    buttons.forEach(el, () => {
         el.classList.add('hide');
     });
-    let randomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
-
-    question.innerHTML = randomQuestion.q;
     
-    let i = 0;
-    randomQuestion.answers.forEach(el => {
-        buttons[i].innerHTML = randomQuestion.answers[i].a;
-        buttons[i].classList.remove('hide');
-        if (randomQuestion.answers[i].correct){
-            buttons[i].classList.add('correct');
-        }
-        i++;
+    questionList[currentQuestion].answers.forEach(el, () =>{
+        
     });
+    currentQuestion += 1;
+  
+    buttons[0].classList.remove('hide');
+    buttons[1].classList.remove('hide');
+    buttons[2].classList.remove('
+    buttons[3].classList.remove('hide');
 };
-
-
-alert('whats up fucker?')
