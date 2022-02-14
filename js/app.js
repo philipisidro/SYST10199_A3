@@ -4,11 +4,11 @@ const question = document.getElementById('question');
 const startButton = document.getElementById('startButton');
 const continueButton = document.getElementById('continue');
 const scoreContainer = document.getElementById('score');
-let shuffledQuestionsList = [] ;
 let score = 0;
 
 startButton.addEventListener('click', () => {
     startButton.classList.add('hide');
+    shuffleQuestion();
     questionContainer.classList.remove('hide');
     setQuestion();
 });
@@ -34,21 +34,20 @@ continueButton.addEventListener('click', () => {
     setQuestion();
 });
 
-const testbtn = document.getElementById('testbtn');
-testbtn.addEventListener('click', () => shuffleQuestion());
-
 function shuffleQuestion(){
-    let currentIndex = questionList.length. shuffledQuestionsList;
+    let currentIndex = questionList.length, shuffledQuestionsList;
     
     while (currentIndex != 0) {
-        shuffledQuestionsList = Math.floor(Math.random() * currentIndex);
+        randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
         
-        [questionList[currentIndex], questionList[shuffledQuestionsList]] = [questionList[shuffledQuestionsList], questionList[currentIndex]] 
-    };
+        [questionList[currentIndex], questionList[randomIndex]] = [questionList[randomIndex], questionList[currentIndex]] 
+    }
     
     
-    console.log(shuffleQuestionsList.q);
+        questionList.forEach(el => {
+        console.log(el.q)
+    });
 
 };
 
