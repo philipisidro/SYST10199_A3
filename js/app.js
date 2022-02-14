@@ -17,11 +17,11 @@ startButton.addEventListener('click', () => {
 buttons.forEach(el => {
     el.addEventListener('click', () => {
         if(el.classList.contains('correct')){
-            console.log('correct answer was chosen');
+            el.classList.add('rightAnswer')
             score++;
             scoreContainer.innerHTML = score;            
         }else {
-            console.log('wrong answer was chosen');
+            el.classList.add('wrongAnswer');
         };
         continueButton.classList.remove('hide');
     });
@@ -48,17 +48,23 @@ function shuffleQuestion(){
 
 function setQuestion(){
 
-    buttons.forEach(el, () => {
+    buttons.forEach(el => {
         el.classList.add('hide');
     });
     
-    questionList[currentQuestion].answers.forEach(el, () =>{
+    let i = 0;
+    
+    penis = questionList[currentQuestion].answers
+    
+
+    penis.forEach(el =>{
+        console.log(el[i].a);
+        buttons[i].innerHTML = el[i].a;
+        buttons[i].classList.remove('hide');
+        if (el[i].answer.correct){
+            buttons[i].classList.add('correct')
+        };
         
     });
     currentQuestion += 1;
-  
-    buttons[0].classList.remove('hide');
-    buttons[1].classList.remove('hide');
-    buttons[2].classList.remove('
-    buttons[3].classList.remove('hide');
 };
