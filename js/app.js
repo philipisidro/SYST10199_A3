@@ -7,9 +7,9 @@ const scoreContainer = document.getElementById('score');
 let score = 0;
 
 startButton.addEventListener('click', () => {
-    startButton.classList.add('hide');
-    shuffleQuestion();
-    questionContainer.classList.remove('hide');
+    startButton.classList.add('hide'); //hides the start button
+    shuffleQuestion(); //shuffles the questions
+    questionContainer.classList.remove('hide'); //shows the quesiton container
     setQuestion();
 });
 
@@ -42,9 +42,7 @@ function shuffleQuestion(){
         currentIndex--;
         
         [questionList[currentIndex], questionList[randomIndex]] = [questionList[randomIndex], questionList[currentIndex]] 
-    }
-    });
-
+    };
 };
 
 function setQuestion(){
