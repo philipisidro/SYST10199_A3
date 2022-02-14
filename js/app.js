@@ -43,10 +43,6 @@ function shuffleQuestion(){
         
         [questionList[currentIndex], questionList[randomIndex]] = [questionList[randomIndex], questionList[currentIndex]] 
     }
-    
-    
-        questionList.forEach(el => {
-        console.log(el.q)
     });
 
 };

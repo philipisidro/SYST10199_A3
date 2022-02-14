@@ -45,3 +45,5 @@ const questionList = [
         ]
     }
 ]
+
+console.log(question[1].answers[1].a)
