@@ -56,14 +56,20 @@ function setQuestion(){
     
     penis = questionList[currentQuestion].answers
     
+    question.innerHTML = penis.question[current]
+    
 
     penis.forEach(el =>{
-        console.log(el[i].a);
-        buttons[i].innerHTML = el[i].a;
+        buttons[i].innerHTML = penis[i].a;
         buttons[i].classList.remove('hide');
-        if (el[i].answer.correct){
+        
+        if (penis[i].correct){
             buttons[i].classList.add('correct')
-        };
+        }
+        console.log("vulva " + i)
+        
+        i++;
+        
         
     });
     currentQuestion += 1;
