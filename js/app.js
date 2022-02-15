@@ -54,13 +54,13 @@ function setQuestion(){
     
     let i = 0;
     
-    penis = questionList[currentQuestion].answers
+    thisQuestion = questionList[currentQuestion].answers
     
-    question.innerHTML = penis.question[current]
+    question.innerHTML = thisQuestion.question[current]
     
 
-    penis.forEach(el =>{
-        buttons[i].innerHTML = penis[i].a;
+    thisQuestion.forEach(el =>{
+        buttons[i].innerHTML = thisQuestion[i].a;
         buttons[i].classList.remove('hide');
         
         if (penis[i].correct){
