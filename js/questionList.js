@@ -10,12 +10,12 @@ const questionList = [
         ]
     },
     {
-        q: "Who is your Twice bias?",
+        q: "What 7 - 8 ?",
         answers: [
-            {a:"Sana", correct: false}, 
-            {a: "Mina", correct: true}, 
-            {a: "↗️", correct: false},
-            {a: "⬆️", correct: false}
+            {a:"4", correct: false}, 
+            {a: "1", correct: true}, 
+            {a: "78", correct: false},
+            {a: "32", correct: false}
         ]
     },
     {
